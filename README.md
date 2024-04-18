@@ -30,7 +30,7 @@ This project uses:
 ### How to test the application
 
 To test this API you can use Postman.
-Json: <br> { <br>
+<br> Json: <br> { <br>
           "firstName": "", <br>
           "lastName": "", <br>
           "addres": "", <br>
