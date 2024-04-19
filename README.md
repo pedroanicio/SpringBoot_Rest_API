@@ -6,6 +6,7 @@ receiving as data inputs the person's first and last name, their address, and th
 ## Technologies used
 
 * Java
+* Maven
 * Spring
 * Mysql
 * Postman
