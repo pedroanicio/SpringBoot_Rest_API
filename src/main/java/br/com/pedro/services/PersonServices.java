@@ -1,7 +1,7 @@
 package br.com.pedro.services;
 
+import br.com.pedro.data.vo.v1.PersonVO;
 import br.com.pedro.exceptions.ResourceNotFoundException;
-import br.com.pedro.model.Person;
 import br.com.pedro.repositories.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,20 +17,20 @@ public class PersonServices {
     @Autowired
     PersonRepository repository;
 
-    public List<Person> findAll(){
+    public List<PersonVO> findAll(){
         logger.info("Finding all people");
 
 
         return repository.findAll();
     }
 
-    public Person Create(Person person){
+    public PersonVO Create(PersonVO person){
         logger.info("Creating one Person");
 
         return repository.save(person);
     }
 
-    public Person Update (Person person){
+    public PersonVO Update (PersonVO person){
         logger.info("Update one Person");
 
         var entity = repository.findById(person.getId())
@@ -55,7 +55,7 @@ public class PersonServices {
 
     }
 
-    public Person findById(Long id){
+    public PersonVO findById(Long id){
         logger.info("Finding one person");
 
 
